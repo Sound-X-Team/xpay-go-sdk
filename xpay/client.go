@@ -56,10 +56,10 @@ func NewClient(config *Config) *Client {
 		}
 	}
 
-	// Extract merchant ID from config or use default
+	// Require merchant ID
 	merchantID := config.MerchantID
 	if merchantID == "" {
-		merchantID = "default" // In production, this would be extracted from API key or passed explicitly
+		panic("MerchantID is required. Get your merchant ID from the X-Pay dashboard.")
 	}
 
 	httpClient := NewHTTPClient(config)
