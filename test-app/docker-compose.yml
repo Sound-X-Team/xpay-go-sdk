@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  xpay-go-test-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - XPAY_API_KEY=${XPAY_API_KEY:-sk_sandbox_your_key_here}
+      - XPAY_MERCHANT_ID=${XPAY_MERCHANT_ID:-your_merchant_id_here}
+      - XPAY_ENVIRONMENT=${XPAY_ENVIRONMENT:-sandbox}
+      - XPAY_BASE_URL=${XPAY_BASE_URL:-http://localhost:8000}
+      - SERVER_PORT=3000
+      - XPAY_DEBUG=true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # Optional: Add a simple nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - xpay-go-test-app
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: unless-stopped
