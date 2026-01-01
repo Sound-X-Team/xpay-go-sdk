@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Sound-X-Team/x-pay/integrations/sdks/golang/test-app/config"
-	"github.com/Sound-X-Team/x-pay/integrations/sdks/golang/xpay"
+	"github.com/Sound-X-Team/xpay-go-sdk/test-app/config"
+	"github.com/Sound-X-Team/xpay-go-sdk/xpay"
 	"github.com/shopspring/decimal"
 )
 

@@ -5,7 +5,7 @@ This guide will help you get started with the X-Pay Go SDK.
 ## Installation
 
 ```bash
-go get github.com/Sound-X-Team/x-pay/integrations/sdks/golang
+go get github.com/Sound-X-Team/xpay-go-sdk
 ```
 
 ## Quick Start
@@ -18,7 +18,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Sound-X-Team/x-pay/integrations/sdks/golang/xpay"
+    "github.com/Sound-X-Team/xpay-go-sdk/xpay"
     "github.com/shopspring/decimal"
 )
 

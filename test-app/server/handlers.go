@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Sound-X-Team/x-pay/integrations/sdks/golang/xpay"
+	"github.com/Sound-X-Team/xpay-go-sdk/xpay"
 	"github.com/gorilla/mux"
 	"github.com/shopspring/decimal"
 )

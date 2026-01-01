@@ -1,7 +1,7 @@
 # X-Pay Go SDK
 
 [![Go Version](https://img.shields.io/badge/go-1.19+-blue.svg)](https://golang.org/dl/)
-[![GoDoc](https://godoc.org/github.com/Sound-X-Team/x-pay/integrations/sdks/golang?status.svg)](https://godoc.org/github.com/Sound-X-Team/x-pay/integrations/sdks/golang)
+[![GoDoc](https://godoc.org/github.com/Sound-X-Team/xpay-go-sdk?status.svg)](https://godoc.org/github.com/Sound-X-Team/xpay-go-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The official Go SDK for X-Pay payment processing platform. Accept payments from multiple providers including Stripe, Mobile Money, and X-Pay Wallets with a unified API.
@@ -20,7 +20,7 @@ The official Go SDK for X-Pay payment processing platform. Accept payments from 
 ## Installation
 
 ```bash
-go get github.com/Sound-X-Team/x-pay/integrations/sdks/golang
+go get github.com/Sound-X-Team/xpay-go-sdk
 ```
 
 ## Quick Start
@@ -33,7 +33,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Sound-X-Team/x-pay/integrations/sdks/golang/xpay"
+    "github.com/Sound-X-Team/xpay-go-sdk/xpay"
     "github.com/shopspring/decimal"
 )
 

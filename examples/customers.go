@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 	
-	"github.com/Sound-X-Team/x-pay/integrations/sdks/golang/xpay"
+	"github.com/Sound-X-Team/xpay-go-sdk/xpay"
 )
 
 func main() {
